@@ -13,6 +13,7 @@
   (keyup)="onKeyUp($event)"
   (keyup.enter)="armazenarValor(campoInput.value)"
   (blur)="armazenarValor(campoInput.value)"
+  class="form-control"
   #campoInput>
 
   <p>valor atual: {{ valorAtual }}</p>
@@ -25,3 +26,19 @@
     (mouseout)="onMouseOut()"
     [class.highlight]="isMouseOVer"
   > Passe o Mouse</span>
+  
+  <br>
+  <br>
+  <br>
+
+  <input #valorCss (keyup.enter)="onEnter(valorCss.value)" 
+    placeholder="Digite a classe css aqui">
+
+  <br>
+  <div *ngIf="showMessage" [class]="classe" role="alert">
+    Mensagem para o usuário
+  </div>
+    
+  <button (click)="changeShowMessage()" class="btn btn-primary">
+    Show Message
+  </button>

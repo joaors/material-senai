@@ -13,6 +13,9 @@ export class DataBindingComponent implements OnInit {
   valorAtual: string = "";
   isMouseOVer: boolean = false;
 
+  showMessage: boolean = false;
+  classe: string = "alert alert-danger";
+
   constructor() { }
 
   ngOnInit() {
@@ -34,4 +37,11 @@ export class DataBindingComponent implements OnInit {
     this.isMouseOVer = false;
   }
 
+  changeShowMessage() {
+    this.showMessage = !this.showMessage;
+  }
+
+  onEnter(valor: string) {
+    this.classe = valor;
+  }
 }
