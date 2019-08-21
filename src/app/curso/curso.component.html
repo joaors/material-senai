@@ -24,10 +24,10 @@
         </div>
         <div class="col-sm-12">
             <input type="email" email class="form-control" name="email" id="email" 
-            placeholder="e-mail contato" #email="ngModel" [(ngModel)]="curso.email">
+            placeholder="e-mail contato" required #email="ngModel" [(ngModel)]="curso.email">
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submeter</button>
+    <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submeter</button>
 
 </form>
