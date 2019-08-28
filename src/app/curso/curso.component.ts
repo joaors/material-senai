@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { CursoService } from './curso.service';
 
 @Component({
   selector: 'app-curso',
@@ -9,23 +10,20 @@ import { NgForm } from '@angular/forms';
 export class CursoComponent implements OnInit {
   cursoAtual: string = '';
 
-  curso: any = {
-    nome: null,
-    descricao: null,
-    email: null
-  }
+  curso: any;
+  cursos: any[] = [];
 
-  constructor() { }
+  constructor(private service: CursoService) { }
 
   ngOnInit() {
+    this.curso = new Object();
   }
 
   onSubmit(formulario: NgForm) {
     if (formulario.valid) {
-      console.log('---- valores do formulário');
-      console.log(formulario.form.value); 
-      console.log('Valor do objeto')
-      console.log(this.curso);  
+      //salvar curso
+      // instanciar novo curso
+      // atualizar lista atual de cursos
     }
   }
 
