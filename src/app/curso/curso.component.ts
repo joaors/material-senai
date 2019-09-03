@@ -21,9 +21,10 @@ export class CursoComponent implements OnInit {
 
   onSubmit(formulario: NgForm) {
     if (formulario.valid) {
-      //salvar curso
-      // instanciar novo curso
-      // atualizar lista atual de cursos
+      this.curso.id =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      this.service.salvar(this.curso);
+      this.curso = new Object();
+      this.cursos = this.service.getCursos();
     }
   }
 

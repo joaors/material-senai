@@ -32,4 +32,9 @@
 
 </form>
 
-{{ mostrarCursos() }}
+<a *ngFor="let curso of cursos" class="col-1-4"
+    routerLink="/cursodetail/{{curso.id}}">
+  <div>
+    <h4>{{curso.nome}}</h4>
+  </div>
+</a>

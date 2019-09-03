@@ -16,4 +16,8 @@ export class CursoService {
   getCursos() {
     return this.cursos;
   }
+
+  getCurso(id: string): any {
+    return this.cursos.find(curso => curso.id == id);
+  }
 }

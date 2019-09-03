@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CursoComponent } from './curso/curso.component';
 import { AlunoComponent } from './aluno/aluno.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CursoDetailComponent } from './curso-detail/curso-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
     CursoComponent,
-    AlunoComponent
+    AlunoComponent,
+    CursoDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
