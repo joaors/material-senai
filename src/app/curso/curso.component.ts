@@ -17,11 +17,14 @@ export class CursoComponent implements OnInit {
 
   ngOnInit() {
     this.curso = new Object();
+    this.cursos = this.service.getCursos();
   }
 
   onSubmit(formulario: NgForm) {
     if (formulario.valid) {
-      this.curso.id =  Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+      this.curso.id =  
+      Math.random().toString(36).substring(2, 15) 
+      + Math.random().toString(36).substring(2, 15);
       this.service.salvar(this.curso);
       this.curso = new Object();
       this.cursos = this.service.getCursos();

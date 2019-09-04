@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 
 import { CursoService }  from '../curso/curso.service';
 
@@ -12,12 +11,10 @@ import { CursoService }  from '../curso/curso.service';
 export class CursoDetailComponent implements OnInit {
 
   curso: any = new Object();
-
-  constructor(
-    private route: ActivatedRoute,
-    private cursoService: CursoService,
-    private location: Location
+  constructor(private route: ActivatedRoute,
+    private cursoService: CursoService
   ) {}
+
 
   ngOnInit(): void {
     this.getCurso();
